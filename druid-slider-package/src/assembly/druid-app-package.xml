@@ -51,7 +51,7 @@
     </file>
     <file>
       <source>${druid.src}</source>
-      <destName>${druid.version}.tgz</destName>
+      <destName>druid-${druid.version}.tgz</destName>
       <outputDirectory>/package/files/</outputDirectory>
       <fileMode>0755</fileMode>
     </file>

@@ -6,5 +6,5 @@ for action in stop destroy; do
     slider $action $APPNAME
 done
 # Will mirror with source defined in appConfig-mirror.json -- may need customization
-unzip -o target/druid-slider-package-0.1.zip appConfig.json resources.json
-slider create ${APPNAME} --filesystem hdfs://root --queue dev --template appConfig.json --resources resources.json
+unzip -o target/druid-slider-package-0.1.zip appConfig.json resources.json metainfo.xml
+slider create ${APPNAME} --debug --filesystem hdfs://root --queue dev --template appConfig.json --resources resources.json
