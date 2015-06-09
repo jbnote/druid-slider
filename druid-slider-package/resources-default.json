@@ -1,0 +1,37 @@
+{
+  "schema" : "http://example.org/specification/v2.0.0",
+  "metadata" : {
+  },
+  "global" : {
+    "yarn.container.failure.threshold":"10",
+    "yarn.container.failure.window.hours":"1"
+  },
+  "components" : {
+    "DRUID_COORDINATOR" : {
+      "yarn.role.priority" : "1",
+      "yarn.component.instances" : "1",
+      "yarn.memory" : "768",
+      "yarn.vcores" : "1"
+    },
+    "DRUID_REALTIME" : {
+      "yarn.role.priority" : "2",
+      "yarn.component.instances" : "1",
+      "yarn.memory" : "768",
+      "yarn.vcores" : "1"
+    },
+    "DRUID_BROKER" : {
+      "yarn.role.priority" : "3",
+      "yarn.component.instances" : "1",
+      "yarn.memory" : "512",
+      "yarn.vcores" : "1"
+    },
+    "DRUID_HISTORICAL" : {
+      "yarn.role.priority" : "2",
+      "yarn.component.instances" : "1",
+      "yarn.memory" : "768",
+      "yarn.vcores" : "1"
+    },
+    "slider-appmaster" : {
+    }
+  }
+}

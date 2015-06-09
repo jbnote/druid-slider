@@ -1,0 +1,12 @@
+.DS_Store
+.classpath
+.project
+.settings/
+.metadata/
+.idea/
+target/
+*.iml
+/slider
+npm-debug.log
+nb-configuration.xml
+hadoop.log

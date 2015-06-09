@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>druid.server.maxSize</name>
+    <value>386547056640</value>
+  </property>
+  <property>
+    <name>druid.processing.buffer.sizeBytes</name>
+    <value>1073741824</value>
+  </property>
+  <property>
+    <name>druid.segmentCache.locations</name>
+    <value>[ {"path": "${@//site/global/app_log_dir}", "maxSize": 180000000000} ]</value>
+  </property>
+  <property>
+    <name>druid.service</name>
+    <value>historical</value>
+  </property>
+</configuration>

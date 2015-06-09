@@ -1,0 +1,35 @@
+{
+  "schema": "http://example.org/specification/v2.0.0",
+  "metadata": {
+  },
+  "global": {
+    "application.def": ".slider/package/KOYA/koya-slider-package-${project.version}.zip",
+    "java_home": "${JAVA_HOME}",
+
+    "site.global.app_user": "${USER_NAME}",
+    "site.global.app_root": "${AGENT_WORK_ROOT}/app/install/druid-${druid.version}",
+    "site.global.app_install_dir": "${AGENT_WORK_ROOT}/app/install",
+    "site.global.pid_file": "${AGENT_WORK_ROOT}/app/run/druid.pid",
+    "site.global.druid_version": "${druid.version}",
+
+    "site.druid.zookeeper": "${ZK_HOST}",
+    "site.druid.xmx": "4g",
+    "site.druid.xms": "2g",
+    "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
+    "site.druid.mysql": "2c-59-e5-4a-c8-34.hpc.criteo.preprod",
+
+    "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
+    "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
+    "site.realtime.druid.port": "${DRUID_REALTIME.ALLOCATED_PORT}{PER_CONTAINER}",
+    "site.broker.druid.port": "${DRUID_BROKER.ALLOCATED_PORT}{PER_CONTAINER}"
+  },
+  "components": {
+    "DRUID_COORDINATOR": {},
+    "DRUID_HISTORICAL": {},
+    "DRUID_REALTIME": {},
+    "DRUID_BROKER": {},
+    "slider-appmaster": {
+      "jvm.heapsize": "256M"
+    }
+  }
+}

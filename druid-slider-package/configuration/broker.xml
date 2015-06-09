@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>druid.host</name>
+    <value>${@//site/global/hostname}</value>
+  </property>
+  <property>
+    <name>druid.zk.service.host</name>
+    <value>${@//site/druid/zookeeper}</value>
+  </property>
+  <property>
+    <name>druid.zk.path.base</name>
+    <value>/druid/${@//site/druid/instance.name}</value>
+  </property>
+  <property>
+    <name>druid.extensions.coordinates</name>
+    <value>["io.druid.extensions:druid-hdfs-storage:${@//site/global/druid.version}"]</value>
+  </property>
+  <property>
+    <name>druid.metadata.storage.connector.connectURI</name>
+    <value>jdbc:mysql://${@//site/druid/mysql}/${@//site/druid/instance.name}</value>
+  </property>
+  <property>
+    <name>druid.storage.type</name>
+    <value>hdfs</value>
+  </property>
+  <property>
+    <name>druid.broker.cache.useCache</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>druid.broker.cache.populateCache</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>druid.broker.cache.unCacheable</name>
+    <value>["groupBy", "select"]</value>
+  </property>
+  <property>
+    <name>druid.broker.cache.sizeInBytes</name>
+    <value>4294967296</value>
+  </property>
+  <property>
+    <name>druid.service</name>
+    <value>broker</value>
+  </property>
+</configuration>
