@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+  <!-- pretty sure we don't need all of this everywhere, so should override
+       locally -->
+  <property>
+    <name>druid.extensions.coordinates</name>
+    <value>["io.druid.extensions:druid-kafka-eight","io.druid.extensions:druid-hdfs-storage","io.druid.extensions:mysql-metadata-storage"]</value>
+  </property>
+
+  <property>
+    <name>druid.extensions.defaultVersion</name>
+    <value>${@//site/global/druid_version}</value>
+  </property>
+
+  <property>
+    <name>druid.extensions.localRepository</name>
+    <value>${@//site/global/app_install_dir}/m2</value>
+  </property>
+
+  <property>
+    <name>druid.extensions.remoteRepositories</name>
+    <value>[ "http://nexus.criteo.prod/content/groups/criteo", "https://repo1.maven.org/maven2", "https://metamx.artifactoryonline.com/metamx/pub-libs-releases-local" ]</value>
+  </property>
+
+  <property>
+    <name>druid.zk.service.host</name>
+    <value>${@//site/druid/zookeeper}</value>
+  </property>
+  <property>   <!-- not sure -->
+    <name>druid.zk.paths.base</name>
+    <value>/druid/${@//site/druid/instance.name}</value>
+  </property>
+
+  <property>
+    <name>druid.metadata.storage.connector.connectURI</name>
+    <value>jdbc:mysql://${@//site/druid/mysql.host}/${@//site/druid/instance.name}</value>
+  </property>
+  <property>
+    <name>druid.metadata.storage.type</name>
+    <value>mysql</value>
+  </property>
+  <property>
+    <name>druid.metadata.storage.connector.user</name>
+    <value>druid</value>
+  </property>
+  <property>
+    <name>druid.metadata.storage.connector.password</name>
+    <value>diurd</value>
+  </property>
+  <property>
+    <name>druid.metadata.storage.connector.useValidationQuery</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>druid.storage.type</name>
+    <value>hdfs</value>
+  </property>
+  <property>
+    <name>druid.storage.storageDirectory</name>
+    <value>/user/${@//site/global/app_user}/druid</value>
+  </property>
+
+  <property>
+    <name>druid.cache.type</name>
+    <value>local</value>
+  </property>
+  <property>
+    <name>druid.cache.sizeInBytes</name>
+    <value>10000000</value>
+  </property>
+
+  <property>
+    <name>druid.selectors.indexing.serviceName</name>
+    <value>overlord</value>
+  </property>
+
+  <property>
+    <name>druid.emitter</name>
+    <value>noop</value>
+  </property>
+
+</configuration>

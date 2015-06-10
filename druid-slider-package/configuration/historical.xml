@@ -2,19 +2,28 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
   <property>
-    <name>druid.server.maxSize</name>
-    <value>386547056640</value>
-  </property>
-  <property>
-    <name>druid.processing.buffer.sizeBytes</name>
-    <value>1073741824</value>
-  </property>
-  <property>
-    <name>druid.segmentCache.locations</name>
-    <value>[ {"path": "${@//site/global/app_log_dir}", "maxSize": 180000000000} ]</value>
+    <name>druid.port</name>
+    <value>${@//site/historical/port}</value>
   </property>
   <property>
     <name>druid.service</name>
     <value>historical</value>
   </property>
+
+  <property>
+    <name>druid.segmentCache.locations</name>
+    <value>[ {"path": "${@//site/global/app_log_dir}", "maxSize": 180000000000} ]</value>
+  </property>
+
+  <property>
+    <name>druid.processing.buffer.sizeBytes</name>
+    <value>1073741824</value>
+  </property>
+
+  <!-- should get back the component configuration here -->
+  <property>
+    <name>druid.processing.numThreads</name>
+    <value>4</value>
+  </property>
+
 </configuration>

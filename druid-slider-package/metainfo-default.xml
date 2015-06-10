@@ -54,7 +54,7 @@
       <component>
         <name>DRUID_REALTIME</name>
         <category>MASTER</category>
-        <minInstanceCount>1</minInstanceCount>
+        <minInstanceCount>0</minInstanceCount>
         <exportedConfigs>realtime</exportedConfigs>
         <commandScript>
           <script>scripts/realtime.py</script>
@@ -74,6 +74,16 @@
     </components>
 
     <configFiles>
+      <configFile>
+        <type>xml</type>
+        <fileName>druid.xml</fileName>
+        <dictionaryName>druid</dictionaryName>
+      </configFile>
+      <configFile>
+        <type>xml</type>
+        <fileName>_common.xml</fileName>
+        <dictionaryName>_common</dictionaryName>
+      </configFile>
       <configFile>
         <type>xml</type>
         <fileName>broker.xml</fileName>
@@ -102,7 +112,7 @@
         <packages>
           <package>
             <type>tarball</type>
-            <name>files/${druid.version}.tgz</name>
+            <name>files/druid-${druid.version}.tgz</name>
           </package>
         </packages>
       </osSpecific>

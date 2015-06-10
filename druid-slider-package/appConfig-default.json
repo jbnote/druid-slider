@@ -15,16 +15,20 @@
     "site.druid.zookeeper": "${ZK_HOST}",
     "site.druid.xmx": "4g",
     "site.druid.xms": "2g",
+    "site.druid.hostname": "${HOSTNAME}",
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
-    "site.druid.mysql": "2c-59-e5-4a-c8-34.hpc.criteo.preprod",
+    "site.druid.mysql.host": "2c-59-e5-4a-c8-34.hpc.criteo.preprod",
 
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.realtime.druid.port": "${DRUID_REALTIME.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.broker.druid.port": "${DRUID_BROKER.ALLOCATED_PORT}{PER_CONTAINER}"
+
   },
   "components": {
-    "DRUID_COORDINATOR": {},
+    "DRUID_COORDINATOR": {
+      "site.druid.extra.classpath": "${@//site/global/app_root}/lib/*"
+    },
     "DRUID_HISTORICAL": {},
     "DRUID_REALTIME": {},
     "DRUID_BROKER": {},
