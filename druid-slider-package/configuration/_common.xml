@@ -22,7 +22,7 @@
 
   <property>
     <name>druid.extensions.remoteRepositories</name>
-    <value>[ "http://nexus.criteo.prod/content/groups/criteo", "https://repo1.maven.org/maven2", "https://metamx.artifactoryonline.com/metamx/pub-libs-releases-local" ]</value>
+    <value>[ "https://repo1.maven.org/maven2", "https://metamx.artifactoryonline.com/metamx/pub-libs-releases-local" ]</value>
   </property>
 
   <property>

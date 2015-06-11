@@ -23,11 +23,8 @@ class Druid(Script):
     import socket
     return socket.getfqdn()
 
-  def start(self, env):
+  def writeconf(self, env):
     import params
-    env.set_params(params)
-    self.configure(env)
-
     # Dump the configuration dependent on the dictionary name
     PropertiesFile(format("{params.config_dir}/_common/common.runtime.properties"),
                    properties = params.configs['_common'],
@@ -41,9 +38,22 @@ class Druid(Script):
                    properties = node_config,
                    owner=params.app_user)
 
-    # Merge shared configuration with local one (or not ?)
+    for log in ['log4j', 'log4j2']:
+      File(format("{params.config_dir}/_common/{log}.xml"),
+           mode=0644,
+           owner=params.app_user,
+           content=Template(format("{log}.xml.j2"),
+                            loglevel=params.configs['log4j']['loglevel'],
+                            filename=format("{params.app_log_dir}/druid-{node_type}-app.txt")))
 
-    # XXX port is where ?
+
+  def start(self, env):
+    import params
+    env.set_params(params)
+    self.configure(env)
+    self.writeconf(env)
+
+    node_type=self.name()
     conf = params.configs['druid']
     log_dir = params.app_log_dir
     process_cmd = format("{params.java64_home}/bin/java -cp {params.config_dir}/_common:{params.config_dir}/{node_type}:{conf[extra.classpath]} -server {conf[java.options]} -Duser.timezone={conf[user.timezone]} -Dfile.encoding={conf[file.encoding]} io.druid.cli.Main server {node_type} 2>{log_dir}/druid-{node_type}.err 1>{log_dir}/druid-{node_type}.out")

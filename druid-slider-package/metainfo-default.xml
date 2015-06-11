@@ -76,6 +76,11 @@
     <configFiles>
       <configFile>
         <type>xml</type>
+        <fileName>log4j2.xml</fileName>
+        <dictionaryName>log4j</dictionaryName>
+      </configFile>
+      <configFile>
+        <type>xml</type>
         <fileName>druid.xml</fileName>
         <dictionaryName>druid</dictionaryName>
       </configFile>

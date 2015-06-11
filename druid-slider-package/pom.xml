@@ -60,8 +60,27 @@
       <artifactId>slider-core</artifactId>
       <version>${slider.version}</version>
     </dependency>
+    <!-- you may need to artificially include this
+         in order to populate your local nexus cache
+         (see site._common.druid.extensions.remoteRepositories) -->
+    <!--
+    <dependency>
+      <groupId>io.druid.extensions</groupId>
+      <artifactId>druid-kafka-eight</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.druid.extensions</groupId>
+      <artifactId>druid-hdfs-storage</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.druid.extensions</groupId>
+      <artifactId>mysql-metadata-storage</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+    -->
   </dependencies>
-
 
 </project>
 

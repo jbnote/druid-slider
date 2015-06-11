@@ -13,7 +13,7 @@
 
   <property>
     <name>druid.extensions.coordinates</name>
-    <value>["io.druid.extensions:druid-hdfs-storage:${@//site/global/druid_version}"]</value>
+    <value>["io.druid.extensions:druid-hdfs-storage"]</value>
   </property>
 
   <property>
