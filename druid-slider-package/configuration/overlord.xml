@@ -2,6 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
   <property>
+    <name>druid.port</name>
+    <value>${@//site/broker/port}</value>
+  </property>
+  <property>
     <name>druid.service</name>
     <value>overlord</value>
   </property>

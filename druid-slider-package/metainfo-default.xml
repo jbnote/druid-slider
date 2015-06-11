@@ -109,6 +109,11 @@
         <fileName>coordinator.xml</fileName>
         <dictionaryName>coordinator</dictionaryName>
       </configFile>
+      <configFile>
+        <type>xml</type>
+        <fileName>overlord.xml</fileName>
+        <dictionaryName>overlord</dictionaryName>
+      </configFile>
     </configFiles>
 
     <osSpecifics>
