@@ -6,6 +6,10 @@
     <value>${@//site/coordinator/port}</value>
   </property>
   <property>
+    <name>druid.extensions.coordinates</name>
+    <value>["io.druid.extensions:mysql-metadata-storage"]</value>
+  </property>
+  <property>
     <name>druid.service</name>
     <value>coordinator</value>
   </property>

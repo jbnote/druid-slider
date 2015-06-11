@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
+
   <property>
     <name>druid.port</name>
     <value>${@//site/historical/port}</value>
@@ -8,6 +9,11 @@
   <property>
     <name>druid.service</name>
     <value>historical</value>
+  </property>
+
+  <property>
+    <name>druid.extensions.coordinates</name>
+    <value>["io.druid.extensions:druid-hdfs-storage"]</value>
   </property>
 
   <property>

@@ -7,7 +7,7 @@
        locally -->
   <property>
     <name>druid.extensions.coordinates</name>
-    <value>["io.druid.extensions:druid-kafka-eight","io.druid.extensions:druid-hdfs-storage","io.druid.extensions:mysql-metadata-storage"]</value>
+    <value>[]</value>
   </property>
 
   <property>
