@@ -19,7 +19,7 @@
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
     "site.druid.mysql.host": "2c-59-e5-4a-c8-34.hpc.criteo.preprod",
 
-    "site.log4j.loglevel": "DEBUG",
+    "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
 
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
