@@ -2,7 +2,7 @@
   <schemaVersion>2.0</schemaVersion>
   <application>
     <name>DRUID</name>
-    <comment>Scalable High-thoughput OLAP cube</comment>
+    <comment>Scalable High-throughput OLAP cube</comment>
     <version>${druid.version}</version>
     <exportedConfigs>None</exportedConfigs>
 
@@ -11,20 +11,20 @@
         <name>servers</name>
         <exports>
           <export>
-            <name>org.apache.druid.coordinator</name>
-            <value>${DRUID_COORDINATOR_HOST}:${site.server.port}</value>
+            <name>io.druid.coordinator</name>
+            <value>${DRUID_COORDINATOR_HOST}:${site.coordinator.druid.port}</value>
           </export>
           <export>
-            <name>org.apache.druid.realtime</name>
-            <value>${DRUID_REALTIME_HOST}:${site.server.port}</value>
+            <name>io.druid.realtime</name>
+            <value>${DRUID_REALTIME_HOST}:${site.realtime.druid.port}</value>
           </export>
           <export>
-            <name>org.apache.druid.historical</name>
-            <value>${DRUID_HISTORICAL_HOST}:${site.server.port}</value>
+            <name>io.druid.historical</name>
+            <value>${DRUID_HISTORICAL_HOST}:${site.historical.druid.port}</value>
           </export>
           <export>
-            <name>org.apache.druid.broker</name>
-            <value>${DRUID_BROKER_HOST}:${site.server.port}</value>
+            <name>io.druid.broker</name>
+            <value>${DRUID_BROKER_HOST}:${site.broker.druid.port}</value>
           </export>
         </exports>
       </exportGroup>
@@ -35,6 +35,7 @@
         <name>DRUID_COORDINATOR</name>
         <category>MASTER</category>
         <minInstanceCount>1</minInstanceCount>
+        <compExports>servers-io.druid.coordinator</compExports>
         <exportedConfigs>coordinator</exportedConfigs>
         <commandScript>
           <script>scripts/coordinator.py</script>
@@ -45,6 +46,7 @@
         <name>DRUID_HISTORICAL</name>
         <category>MASTER</category>
         <minInstanceCount>1</minInstanceCount>
+        <compExports>servers-io.druid.historical</compExports>
         <exportedConfigs>historical</exportedConfigs>
         <commandScript>
           <script>scripts/historical.py</script>
@@ -55,6 +57,7 @@
         <name>DRUID_REALTIME</name>
         <category>MASTER</category>
         <minInstanceCount>0</minInstanceCount>
+        <compExports>servers-io.druid.realtime</compExports>
         <exportedConfigs>realtime</exportedConfigs>
         <commandScript>
           <script>scripts/realtime.py</script>
@@ -65,6 +68,7 @@
         <name>DRUID_BROKER</name>
         <category>SLAVE</category>
         <minInstanceCount>0</minInstanceCount>
+        <compExports>servers-io.druid.broker</compExports>
         <exportedConfigs>broker</exportedConfigs>
         <commandScript>
           <script>scripts/broker.py</script>
