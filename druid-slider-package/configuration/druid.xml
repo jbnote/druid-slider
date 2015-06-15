@@ -29,4 +29,12 @@
     <name>file.encoding</name>
     <value>UTF-8</value>
   </property>
+  <property>
+    <name>mysql.host</name>
+    <value>mysql</value>
+  </property>
+  <property>
+    <name>mysql.database</name>
+    <value>druid</value>
+  </property>
 </configuration>

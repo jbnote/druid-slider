@@ -36,7 +36,7 @@
 
   <property>
     <name>druid.metadata.storage.connector.connectURI</name>
-    <value>jdbc:mysql://${@//site/druid/mysql.host}/${@//site/druid/instance.name}</value>
+    <value>jdbc:mysql://${@//site/druid/mysql.host}/${@//site/druid/mysql.database}</value>
   </property>
   <property>
     <name>druid.metadata.storage.type</name>

@@ -17,7 +17,11 @@
     "site.druid.xms": "2g",
     "site.druid.hostname": "${HOSTNAME}",
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
-    "site.druid.mysql.host": "2c-59-e5-4a-c8-34.hpc.criteo.preprod",
+
+    "site.druid.mysql.host": "galera",
+    "site.druid.mysql.database": "druid_jbnote",
+    "site._common.druid.metadata.storage.connector.user": ,
+    "site._common.druid.metadata.storage.connector.password": ,
 
     "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
