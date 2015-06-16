@@ -25,7 +25,7 @@ class Realtime(druid.Druid):
         File(self.specfile(),
              owner=params.app_user,
              mode=0644,
-             content=DownloadSource(source_file))
+             content=InlineTemplate(DownloadSource(source_file).get_content()))
 
     def writeconf(self, env):
         self.getspec()
