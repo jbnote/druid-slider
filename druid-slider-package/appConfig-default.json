@@ -20,11 +20,14 @@
 
     "site.druid.mysql.host": "galera",
     "site.druid.mysql.database": "druid_jbnote",
-    "site._common.druid.metadata.storage.connector.user": ,
-    "site._common.druid.metadata.storage.connector.password": ,
+    "site._common.druid.metadata.storage.connector.user": "jb.note",
+    "site._common.druid.metadata.storage.connector.password": "cOucOu",
 
     "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
+
+    "site.historical.druid.processing.numThreads": "1",
+    "site.broker.druid.processing.numThreads": "1",
 
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
