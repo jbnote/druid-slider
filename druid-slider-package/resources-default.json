@@ -15,13 +15,13 @@
     },
     "DRUID_HISTORICAL" : {
       "yarn.role.priority" : "2",
-      "yarn.component.instances" : "2",
+      "yarn.component.instances" : "3",
       "yarn.memory" : "4096",
       "yarn.vcores" : "4"
     },
     "DRUID_REALTIME" : {
       "yarn.role.priority" : "3",
-      "yarn.component.instances" : "0",
+      "yarn.component.instances" : "1",
       "yarn.memory" : "4096",
       "yarn.vcores" : "4"
     },

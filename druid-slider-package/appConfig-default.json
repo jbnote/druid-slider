@@ -18,6 +18,7 @@
     "site.druid.hostname": "${HOSTNAME}",
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
 
+    "site.druid.conf": "http://httpfs/user/${USER_NAME}/druid/config.ref?op=open",
     "site.druid.mysql.host": "galera",
     "site.druid.mysql.database": "druid_jbnote",
     "site._common.druid.metadata.storage.connector.user": "jb.note",
@@ -26,6 +27,7 @@
     "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
 
+    "site.realtime.druid.processing.numThreads": "1",
     "site.historical.druid.processing.numThreads": "1",
     "site.broker.druid.processing.numThreads": "1",
 
