@@ -17,6 +17,7 @@
     "site.druid.xmx": "4g",
     "site.druid.xms": "2g",
     "site.druid.hostname": "${HOSTNAME}",
+    "site.druid.cluster.name": "${CLUSTER_NAME}",
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
 
     "site.druid.mysql.host": "galera",

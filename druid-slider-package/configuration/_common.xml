@@ -54,6 +54,10 @@
     <name>druid.metadata.storage.connector.useValidationQuery</name>
     <value>true</value>
   </property>
+  <property>
+    <name>druid.metadata.storage.tables.base</name>
+    <value>${@//site/druid/cluster.name}</value>
+  </property>
 
   <property>
     <name>druid.storage.type</name>
