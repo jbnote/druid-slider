@@ -2,5 +2,5 @@
 
 APPNAME=${1:-droya}
 APPNUM=${2:-3}
-slider flex $APPNAME --component DRUID_REALTIME $APPNUM --filesystem hdfs://root
-slider flex $APPNAME --component DRUID_HISTORICAL $APPNUM --filesystem hdfs://root
+APPTYPE=${3:-"REALTIME"}
+slider flex $APPNAME --component DRUID_${APPTYPE} $APPNUM --filesystem hdfs://root
