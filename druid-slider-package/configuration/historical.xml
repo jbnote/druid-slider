@@ -18,7 +18,7 @@
 
   <property>
     <name>druid.segmentCache.locations</name>
-    <value>[ {"path": "${@//site/global/app_log_dir}", "maxSize": 180000000000} ]</value>
+    <value>[ {"path": "${@//site/global/container_root}/tmp", "maxSize": 180000000000} ]</value>
   </property>
 
   <!-- should get back the component configuration here -->
