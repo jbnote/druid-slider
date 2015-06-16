@@ -27,10 +27,6 @@
     "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
 
-    "site.realtime.druid.processing.numThreads": "1",
-    "site.historical.druid.processing.numThreads": "1",
-    "site.broker.druid.processing.numThreads": "1",
-
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.realtime.druid.port": "${DRUID_REALTIME.ALLOCATED_PORT}{PER_CONTAINER}",

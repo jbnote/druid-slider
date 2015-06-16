@@ -83,4 +83,15 @@
     <value>noop</value>
   </property>
 
+  <!-- default is a bit heaviweight WRT standard
+       YARN containers -->
+  <property>
+    <name>druid.processing.buffer.sizeBytes</name>
+    <value>536870912</value>
+  </property>
+  <property>
+    <name>druid.processing.numThreads</name>
+    <value>4</value>
+  </property>
+
 </configuration>
