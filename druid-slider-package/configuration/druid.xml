@@ -17,6 +17,10 @@
     <name>xms</name>
     <value>2g</value>
   </property>
+  <property> <!-- needed for realtime node -->
+    <name>java.io.tmpdir</name>
+    <value>${@//site/global/container_root}/tmp</value>
+  </property>
   <property>
     <name>java.options</name>
     <value>-XX:+DisplayVMOutputToStderr -Xmx${@//site/druid/xmx} -Xms${@//site/druid/xms} -Djava.library.path=/usr/lib/hadoop/lib/native</value>

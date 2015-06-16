@@ -63,7 +63,7 @@ class Druid(Script):
     conf = params.configs['druid']
     log_dir = params.app_log_dir
     classpath = self.classpath()
-    process_cmd = format("{params.java64_home}/bin/java -cp {params.config_dir}/_common:{params.config_dir}/{node_type}:{classpath}:{params.app_root}/lib/* -server {conf[java.options]} -Duser.timezone={conf[user.timezone]} -Dfile.encoding={conf[file.encoding]} io.druid.cli.Main server {node_type} 2>{log_dir}/druid-{node_type}.err 1>{log_dir}/druid-{node_type}.out")
+    process_cmd = format("{params.java64_home}/bin/java -Djava.io.tmpdir={conf[java.io.tmpdir]} -cp {params.config_dir}/_common:{params.config_dir}/{node_type}:{classpath}:{params.app_root}/lib/* -server {conf[java.options]} -Duser.timezone={conf[user.timezone]} -Dfile.encoding={conf[file.encoding]} io.druid.cli.Main server {node_type} 2>{log_dir}/druid-{node_type}.err 1>{log_dir}/druid-{node_type}.out")
 
 #    if params.configs['global']['http_proxy'] != None:
 #      for var in ['http_proxy', 'HTTP_PROXY']:
