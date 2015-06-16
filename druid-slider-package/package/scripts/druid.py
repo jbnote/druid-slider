@@ -23,6 +23,13 @@ class Druid(Script):
     import socket
     return socket.getfqdn()
 
+  def gettypeconf(self):
+    import params
+    node_config=params.configs[self.name()]
+    hostname=self.hostname()
+    node_config.update({'druid.host':format("{hostname}:{node_config[druid.port]}")})
+    return node_config
+
   def writeconf(self, env):
     import params
     # Dump the configuration dependent on the dictionary name
@@ -31,11 +38,8 @@ class Druid(Script):
                    owner=params.app_user)
 
     node_type=self.name()
-    node_config=params.configs[node_type]
-    hostname=self.hostname()
-    node_config.update({'druid.host':format("{hostname}:{node_config[druid.port]}")})
     PropertiesFile(format("{params.config_dir}/{node_type}/runtime.properties"),
-                   properties = node_config,
+                   properties = self.gettypeconf(),
                    owner=params.app_user)
 
     for log in ['log4j', 'log4j2']:

@@ -20,16 +20,15 @@
     <name>druid.publish.type</name>
     <value>metadata</value>
   </property>
-  <!--
+
+  <!-- compulsory on -->
   <property>
     <name>druid.realtime.specFile</name>
     <value>${@//site/global/app_install_dir}/realtime.spec</value>
   </property>
 
-
-      druid.processing.buffer.sizeBytes
+  <!--
       druid.processing.formatString
-      druid.processing.numThreads
       druid.processing.columnCache.sizeBytes
   -->
 </configuration>

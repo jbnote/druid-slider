@@ -18,11 +18,12 @@
     "site.druid.hostname": "${HOSTNAME}",
     "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
 
-    "site.druid.conf": "http://httpfs/user/${USER_NAME}/druid/config.ref?op=open",
     "site.druid.mysql.host": "galera",
     "site.druid.mysql.database": "druid_jbnote",
     "site._common.druid.metadata.storage.connector.user": "jb.note",
     "site._common.druid.metadata.storage.connector.password": "cOucOu",
+
+    "site.realtime.druid.realtime.specFile": "http://isione-hpc.criteo.grid/hadoop/druid/ft_preprod_slider.spec",
 
     "site.log4j.loglevel": "INFO",
     "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
