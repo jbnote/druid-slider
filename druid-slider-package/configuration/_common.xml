@@ -31,7 +31,7 @@
   </property>
   <property>   <!-- not sure -->
     <name>druid.zk.paths.base</name>
-    <value>/druid/${@//site/druid/instance.name}</value>
+    <value>/druid/${@//site/global/app_user}/${@//site/global/cluster_name}</value>
   </property>
 
   <property>
@@ -56,7 +56,7 @@
   </property>
   <property>
     <name>druid.metadata.storage.tables.base</name>
-    <value>${@//site/druid/cluster.name}</value>
+    <value>druid_slider_${@//site/global/cluster_name}</value>
   </property>
 
   <property>
@@ -65,7 +65,7 @@
   </property>
   <property>
     <name>druid.storage.storageDirectory</name>
-    <value>/user/${@//site/global/app_user}/druid</value>
+    <value>/user/${@//site/global/app_user}/druid/${@//site/global/cluster_name}</value>
   </property>
 
   <property>

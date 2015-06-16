@@ -7,6 +7,7 @@
     "java_home": "${JAVA_HOME}",
 
     "site.global.app_user": "${USER_NAME}",
+    "site.global.cluster_name": "${CLUSTER_NAME}",
     "site.global.container_root": "${AGENT_WORK_ROOT}",
     "site.global.app_root": "${AGENT_WORK_ROOT}/app/install/druid-${druid.version}",
     "site.global.app_install_dir": "${AGENT_WORK_ROOT}/app/install",
@@ -17,8 +18,6 @@
     "site.druid.xmx": "4g",
     "site.druid.xms": "2g",
     "site.druid.hostname": "${HOSTNAME}",
-    "site.druid.cluster.name": "${CLUSTER_NAME}",
-    "site.druid.instance.name": "${USER_NAME}/${CLUSTER_NAME}",
 
     "site.druid.mysql.host": "galera",
     "site.druid.mysql.database": "druid_jbnote",
