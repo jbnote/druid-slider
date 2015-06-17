@@ -31,12 +31,12 @@ and you don't need internet access.
 You can also setup `site._common.druid.extensions.remoteRepositories` to
 point to a local nexus mirror.
 
-## Realtime nodes
+### Realtime nodes
 
 You cannot run realtime nodes without configuring their specFile,
 therefore, they are not enabled by default.
 
-### Build
+## Build
 
 Edit `slider.version` in pom.xml to match the slider version you installed
 
@@ -46,7 +46,7 @@ $ mvn clean install -DskipTests -Ddruid.src=$DRUID_TARBALL_PATH -Ddruid.version=
 ```
 The resulting slider application package lives in __`target/druid-slider-package-0.1.zip`__
 
-### Configure druid-slider application package
+## Configure druid-slider application package
 
 If you use the `build.sh` script, the configuration file templates are
 already in your working directory. Otherwise extract them from the
@@ -88,7 +88,7 @@ Configure the number of servers and other resource requirements:
 ```
 More information about the application configuration can be found [here](http://slider.incubator.apache.org/docs/configuration/core.html).
 
-### Deploy
+## Deploy
 
 The `deploy.sh` script provides an example of how to deploy.
 
