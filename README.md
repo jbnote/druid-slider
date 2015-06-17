@@ -18,11 +18,11 @@ git checkout -b slider-0.80.0-incubating remotes/origin/releases/slider-0.80.0-i
 The Slider version you checked out needs to match ${slider.version} in pom.xml
 
 Artifacts:
- - Slider application package: __`target/koya-slider-package-0.1.zip`__
+ - Slider application package: __`target/druid-slider-package-0.1.zip`__
 
 ####Install Slider
 
-### Configure KOYA application package
+### Configure druid-slider application package
 
 If you use the full archive, the configuration file templates are already in your working directory. Otherwise extract them from the Slider package.
 
