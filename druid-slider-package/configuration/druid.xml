@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
+<!--${@//site/global/app_root}/lib/javax.servlet-api-3.1.0.jar:${@//site/global/app_root}/lib/guava-16.0.1.jar:/etc/hadoop/conf:/usr/lib/hadoop/lib/*:/usr/lib/hadoop/*:/usr/lib/hadoop-hdfs/:/usr/lib/hadoop-hdfs/lib/*:/usr/lib/hadoop-hdfs/*:/usr/lib/hadoop-yarn/lib/*:/usr/lib/hadoop-yarn/*:/usr/lib/hadoop-0.20-mapreduce/:/usr/lib/hadoop-0.20-mapreduce/lib/*:/usr/lib/hadoop-0.20-mapreduce/*-->
   <property>
     <name>hadoop.classpath</name>
-    <value>${@//site/global/app_root}/lib/javax.servlet-api-3.1.0.jar:${@//site/global/app_root}/lib/guava-16.0.1.jar:/etc/hadoop/conf:/usr/lib/hadoop/lib/*:/usr/lib/hadoop/*:/usr/lib/hadoop-hdfs/:/usr/lib/hadoop-hdfs/lib/*:/usr/lib/hadoop-hdfs/*:/usr/lib/hadoop-yarn/lib/*:/usr/lib/hadoop-yarn/*:/usr/lib/hadoop-0.20-mapreduce/:/usr/lib/hadoop-0.20-mapreduce/lib/*:/usr/lib/hadoop-0.20-mapreduce/*</value>
+    <value>/etc/hadoop/conf</value>
   </property>
   <property>
     <name>xmx</name>
