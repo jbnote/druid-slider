@@ -53,7 +53,7 @@
   </property>
   <property>
     <name>druid.metadata.storage.connector.password</name>
-    <value>diurd</value>
+    <value></value>
   </property>
   <property>
     <name>druid.metadata.storage.connector.useValidationQuery</name>

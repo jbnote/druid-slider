@@ -13,22 +13,7 @@
     "site.global.app_install_dir": "${AGENT_WORK_ROOT}/app/install",
     "site.global.pid_file": "${AGENT_WORK_ROOT}/app/run/druid.pid",
     "site.global.druid_version": "${druid.version}",
-
     "site.druid.zookeeper": "${ZK_HOST}",
-    "site.druid.xmx": "4g",
-    "site.druid.xms": "2g",
-    "site.druid.hostname": "${HOSTNAME}",
-
-    "site.druid.mysql.host": "galera",
-    "site.druid.mysql.database": "druid_jbnote",
-    "site._common.druid.metadata.storage.connector.user": "jb.note",
-    "site._common.druid.metadata.storage.connector.password": "cOucOu",
-    "site._common.druid.storage.storageDirectory": "hdfs://root/user/${@//site/global/app_user}/druid/${@//site/global/cluster_name}",
-
-    "site.realtime.druid.realtime.specFile": "http://isione-hpc.criteo.grid/hadoop/druid/ft_preprod_slider.spec",
-
-    "site.log4j.loglevel": "INFO",
-    "site._common.druid.extensions.remoteRepositories": "[ \"http://nexus.criteo.preprod/content/groups/criteo\" ]",
 
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
@@ -37,9 +22,7 @@
 
   },
   "components": {
-    "DRUID_COORDINATOR": {
-      "site.druid.extra.classpath": "${@//site/global/app_root}/lib/*"
-    },
+    "DRUID_COORDINATOR": {},
     "DRUID_HISTORICAL": {},
     "DRUID_REALTIME": {},
     "DRUID_BROKER": {},

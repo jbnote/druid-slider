@@ -8,7 +8,7 @@
   </property>
   <property>
     <name>xmx</name>
-    <value>3g</value>
+    <value>4g</value>
   </property>
   <property>
     <name>xms</name>
