@@ -22,7 +22,7 @@ Work is underway to allow Phoenix to act as a metadata store, which would allow 
 Druid extensions (at least druid-hdfs-storage, mysql-metadata-storage
 are needed) use guice to download dependencies from maven. The default
 configuration needs internet access and takes a long time to run. This is a [known issue].
-[known issue]::http://druid.io/docs/latest/Including-Extensions.html
+[known issue]:http://druid.io/docs/latest/Including-Extensions.html
 
 The `build.sh` script packages some dependencies in the druid tarball so
 you don't have to download them. Startup time is considerably improved
