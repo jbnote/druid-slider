@@ -2,9 +2,6 @@ from resource_management import *
 import druid
 
 class Realtime(druid.Druid):
-    def classpath(self):
-        return self.hadoop_classpath()
-
     def name(self):
         return "realtime"
 
