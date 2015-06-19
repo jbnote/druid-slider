@@ -18,7 +18,13 @@
     "site.coordinator.druid.port": "${DRUID_COORDINATOR.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.historical.druid.port": "${DRUID_HISTORICAL.ALLOCATED_PORT}{PER_CONTAINER}",
     "site.realtime.druid.port": "${DRUID_REALTIME.ALLOCATED_PORT}{PER_CONTAINER}",
-    "site.broker.druid.port": "${DRUID_BROKER.ALLOCATED_PORT}{PER_CONTAINER}"
+    "site.broker.druid.port": "${DRUID_BROKER.ALLOCATED_PORT}{PER_CONTAINER}",
+
+    "site.druid.mysql.host": "galera",
+    "site.druid.mysql.database": "druid_jbnote",
+    "site._common.druid.metadata.storage.connector.user": "jb.note",
+    "site._common.druid.metadata.storage.connector.password": "cOucOu",
+    "site.realtime.druid.realtime.specFile": "http://isione-hpc.criteo.grid/hadoop/druid/ft_preprod_slider.spec"
 
   },
   "components": {

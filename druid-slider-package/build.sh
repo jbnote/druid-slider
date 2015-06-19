@@ -1,7 +1,7 @@
 #! /bin/bash
 
-DRUID_VERSION="0.7.3"
-SOURCE=http://static.druid.io/artifacts/releases/druid-${DRUID_VERSION}-bin.tar.gz
+DRUID_VERSION="0.7.3-cdh5.4.2"
+SOURCE=http://isione-hpc.criteo.grid/hadoop/druid/druid-${DRUID_VERSION}-bin.tar.gz
 TARGET=$HOME/$(basename $SOURCE)
 
 CONFIGS="appConfig.json resources.json"
