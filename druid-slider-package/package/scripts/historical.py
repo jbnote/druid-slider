@@ -2,8 +2,7 @@ import druid
 
 class Historical(druid.Druid):
     def classpath(self):
-        import params
-        return params.configs['druid']['hadoop.classpath']
+        return self.hadoop_classpath()
 
     def name (self):
         return "historical"
