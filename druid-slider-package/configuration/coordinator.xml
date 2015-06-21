@@ -7,7 +7,7 @@
   </property>
   <property>
     <name>druid.extensions.coordinates</name>
-    <value>["io.druid.extensions:mysql-metadata-storage"]</value>
+    <value>["${@//site/druid/extension.metadata}"]</value>
   </property>
   <property>
     <name>druid.service</name>

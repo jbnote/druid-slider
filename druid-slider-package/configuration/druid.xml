@@ -9,6 +9,14 @@
     <name>xms</name>
     <value>2g</value>
   </property>
+  <property>
+    <name>extension.metadata</name>
+    <value>io.druid.extensions:mysql-metadata-storage</value>
+  </property>
+  <property>
+    <name>extension.storage</name>
+    <value>io.druid.extensions:druid-hdfs-storage</value>
+  </property>
   <property> <!-- needed for realtime node -->
     <name>java.io.tmpdir</name>
     <value>${@//site/global/container_root}/tmp</value>

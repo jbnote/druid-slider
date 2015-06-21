@@ -13,7 +13,7 @@
 
   <property>
     <name>druid.extensions.coordinates</name>
-    <value>["io.druid.extensions:druid-kafka-eight","io.druid.extensions:druid-hdfs-storage","io.druid.extensions:mysql-metadata-storage"]</value>
+    <value>["io.druid.extensions:druid-kafka-eight","${@//site/druid/extension.storage}","${@//site/druid/extension.metadata}"]</value>
   </property>
 
   <property>
